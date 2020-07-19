@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
-import '../screens/results_page.dart';
 
 class BottomButton extends StatelessWidget {
   BottomButton({@required this.onTap, @required this.buttonTitle});
@@ -10,18 +9,11 @@ class BottomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => ResultsPage(),
-          ),
-        );
-      },
+      onTap: onTap,
       child: Container(
         child: Center(
           child: Text(
-            'CALCULATE',
+            buttonTitle,
             style: kLargeButtonTextStyle,
           ),
         ),
